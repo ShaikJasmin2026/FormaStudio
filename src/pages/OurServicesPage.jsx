@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import "./css/Services.css";
-
+const MotionLink = motion(Link);
 const services = [
   {
     number: "01",
@@ -418,8 +418,8 @@ export default function Services() {
             <span>extraordinary.</span>
           </h2>
 
-          <motion.a
-            href="mailto:hello@yourstudio.com"
+          <MotionLink
+            to="/contact-us"
             className="services-contact-button"
             whileHover={
               reducedMotion
@@ -430,7 +430,7 @@ export default function Services() {
           >
             Start a conversation
             <ArrowUpRight size={21} />
-          </motion.a>
+          </MotionLink>
         </motion.div>
 
       </section>

@@ -4,9 +4,10 @@ import {
   ArrowRight,
   CalendarDays,
 } from "lucide-react";
-
+import { Link } from "react-router-dom";
 import "./css/Blog.css";
 
+const MotionLink = motion(Link);
 const featuredPost = {
   id: 1,
   category: "Company Updates",
@@ -335,10 +336,10 @@ export default function BlogPage() {
           like to discuss? We'd love to hear from you.
         </p>
 
-        <a href="/#contact" className="blog-contact-button">
+        <MotionLink to="/contact-us" className="blog-contact-button">
           Get in touch
           <ArrowUpRight size={21} />
-        </a>
+        </MotionLink>
 
       </section>
 

@@ -8,9 +8,10 @@ import {
   Leaf,
   Code2,
 } from "lucide-react";
-
+import { Link } from "react-router-dom";
 import "./css/AboutUs.css";
 
+const MotionLink = motion(Link);
 const values = [
   {
     number: "01",
@@ -490,13 +491,13 @@ function AboutPage() {
           what's possible together.
         </p>
 
-        <a
-          href="/#contact"
+        <MotionLink
+          to="/contact-us"
           className="about-contact-button"
         >
           Get in touch
           <ArrowUpRight size={21} />
-        </a>
+        </MotionLink>
 
       </section>
 

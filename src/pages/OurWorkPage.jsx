@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import "./css/Work.css";
 
+const MotionLink = motion(Link);
 const categories = [
   "All",
   "Websites",
@@ -318,13 +320,13 @@ export default function WorkPage() {
           you want to build? Let's talk.
         </p>
 
-        <a
-          href="mailto:hello@yourstudio.com"
+        <MotionLink
+          to="/contact-us"
           className="work-page-contact-button"
         >
           Start a conversation
           <ArrowUpRight size={20} />
-        </a>
+        </MotionLink>
       </section>
 
     </main>

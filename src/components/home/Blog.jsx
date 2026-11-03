@@ -5,10 +5,11 @@ import {
   useTransform,
   useSpring,
 } from "motion/react";
-
+import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { ArrowRight, MoveUpRight, Sparkles } from "lucide-react";
 
+const MotionLink = motion(Link);
 const blogPosts = [
   {
     id: 1,
@@ -351,7 +352,8 @@ function BlogContact() {
         />
       )}
 
-      <motion.a
+      <MotionLink
+        to="/contact-us"
         href="mailto:hello@elementarydigital.co.uk"
         className="blog-contact-link group relative z-10"
         initial={{
@@ -405,7 +407,7 @@ function BlogContact() {
         >
           <MoveUpRight size={22} />
         </motion.span>
-      </motion.a>
+      </MotionLink>
     </section>
   );
 }
