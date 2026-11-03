@@ -4853,6 +4853,7 @@ button:focus-visible {
     radial-gradient(circle at 88% 8%, rgb(201 111 87 / 13%), transparent 24%),
     #203d33;
   color: #f8f6f0;
+  border-radius: 0 !important;
 }
 
 .site-footer::before {
@@ -4867,6 +4868,7 @@ button:focus-visible {
   border-radius: 50%;
   box-shadow: 0 0 0 36px rgb(248 246 240 / 3%), 0 0 0 72px rgb(248 246 240 / 2%);
   pointer-events: none;
+  display: none !important;
 }
 
 .footer-container {
